@@ -91,7 +91,7 @@ V=fopen(d2,"r");
 unsigned short name ,type,classs,len;
 int ttl,ip;
 
-if(V!=0) // the host name in the server database
+if(V!=0) // the host name is in the server database
 {
 name =0xc00c,type=1,classs=1,ttl=16,len=4;
 fscanf(V,"%x",&ip);//get the ip add
@@ -107,7 +107,7 @@ d[siz+12]=c[3];d[siz+13]=c[2];d[siz+14]=c[1];d[siz+15]=c[0];
  c=&ttl;d[siz+6]=c[3];d[siz+7]=c[2];d[siz+8]=c[1],d[siz+9]=c[0];
  c=&len;d[siz+10]=c[1];d[siz+11]=c[0];
 }
-}else// the is host not in the database, and we will ask for help from other dns server then send the response to the user
+}else// the  host is not in the database,so we will ask for help from other dns server then send the response to the user
 {
     
    int siz2,m=0;
